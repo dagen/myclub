@@ -1,0 +1,75 @@
+{
+    "name":"dagen-myclub",
+    "openBrowser":true,
+    "openBrowserURL":"http://localhost:8080",
+    "startTimeout":240,
+    "stopsocket":50123,
+    "debug":false,
+    "trace":false,
+    "console":false,
+    "profile":"development",
+    "dockEnable":true,
+    "trayEnable":true,
+    "trayicon":"/assets/img/favicon-32x32.png",
+    "trayOptions":[
+        {
+            "label":"View",
+            "action":"openbrowser",
+            "url":"http://localhost:8080/index.cfm",
+            "disabled":false,
+            "image":"/assets/img/favicon-32x32.png"
+        },
+        {
+            "label":"Open VScode",
+            "action":"runAsync",
+            "command":"code .",
+            "disabled":false,
+            "image":"/assets/img/favicon-32x32.png"
+        },
+        {
+            "label":"Open Webroot",
+            "action":"openfilesystem",
+            "path":"./",
+            "disabled":false,
+            "image":"/assets/img/favicon-32x32.png"
+        }
+    ],
+    "web":{
+        "host":"127.0.0.1",
+        "webroot":"./",
+        "directoryBrowsing":true,
+        "accessLogEnable":true,
+        "maxRequests":30,
+        "gzipEnable":true,
+        "gzipPredicate":"regex( '(.*).css' ) and request-larger-than( 500 )",
+        "errorPages":{
+            "404":"/path/to/404.html",
+            "500":"/path/to/500.html",
+            "default":"/path/to/default.html"
+        },
+        "welcomeFiles":"index.cfm",
+        "HTTP":{
+            "enable":true,
+            "port":8080
+        },
+        "SSL":{
+            "enable":false,
+            "port":443,
+            "certFile":"",
+            "keyFile":"",
+            "keyPass":""
+        },
+        "AJP":{
+            "enable":false,
+            "port":8009
+        },
+        "rewrites":{
+            "enable":true,
+            "logEnable":true,
+            "statusPath":"/rewriteStatus"
+        }
+    },
+    "cfconfig":{
+        "file":"assets/files/file.json"
+    }
+}

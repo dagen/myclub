@@ -1,0 +1,9 @@
+{
+    "name":"Lucee Light CF Engine",
+    "version":"5.4.3+2",
+    "createPackageDirectory":false,
+    "location":"https://cdn.lucee.org/rest/update/provider/forgebox/5.4.3.2?light=true",
+    "slug":"lucee-light",
+    "shortDescription":"Lucee Light WAR engine for CommandBox servers.",
+    "type":"cf-engines"
+}
